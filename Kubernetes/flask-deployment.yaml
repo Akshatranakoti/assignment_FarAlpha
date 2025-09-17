@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: <dockerhub-user>/flask-mongo:v1
+        image: akshatranakoti032002/flask-mongo:v1   # 👈 your real image
         ports:
         - containerPort: 5000
         env:
