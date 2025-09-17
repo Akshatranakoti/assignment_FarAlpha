@@ -5,7 +5,9 @@ import os
 
 app = Flask(__name__)
 
-client = MongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017/"))
+
+MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb://mongo-0.mongo.devops-assignment.svc.cluster.local:27017/")
+client = MongoClient(MONGODB_URI)
 db = client.flask_db
 collection = db.data
 
